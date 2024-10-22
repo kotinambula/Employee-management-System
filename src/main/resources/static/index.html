@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee CRUD</title>
+</head>
+<body>
+    <h1>Employee Management</h1>
+    <div>
+        <h2>Add Employee</h2>
+        <form id="employeeForm">
+            <input type="text" id="name" placeholder="Name" required />
+            <input type="text" id="department" placeholder="Department" required />
+            <input type="number" id="salary" placeholder="Salary" required />
+            <button type="submit">Add Employee</button>
+        </form>
+    </div>
+
+    <div>
+        <h2>Employee List</h2>
+        <ul id="employeeList"></ul>
+    </div>
+
+    <script>
+        const apiUrl = '/api/employee';
+
+        async function fetchEmployees() {
+            const response = await fetch(apiUrl);
+            const employees = await response.json();
+            const employeeList = document.getElementById('employeeList');
+            employeeList.innerHTML = '';
+            employees.forEach(employee => {
+                const li = document.createElement('li');
+                li.textContent = `${employee.name} (${employee.department}) - $${employee.salary}`;
+                employeeList.appendChild(li);
+            });
+        }
+
+        document.getElementById('employeeForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const role = document.getElementById('department').value;
+            const salary = document.getElementById('salary').value;
+
+            await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, role, salary })
+            });
+            fetchEmployees();
+            document.getElementById('employeeForm').reset();
+        });
+
+        fetchEmployees();
+    </script>
+</body>
+</html>
