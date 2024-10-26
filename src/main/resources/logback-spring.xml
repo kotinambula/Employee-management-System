@@ -13,9 +13,9 @@
 
     <!-- Rolling File Appender for production logging -->
     <appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_PATH}/application.log</file>
+        <file>${LOG_PATH}/employee-management-system-logs.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>${LOG_PATH}/application-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>${LOG_PATH}employee-management-system-logs-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <maxFileSize>10MB</maxFileSize>
             <maxHistory>30</maxHistory> <!-- Keep logs for 30 days -->
             <totalSizeCap>100MB</totalSizeCap>

@@ -1,0 +1,60 @@
+2024-10-26 18:09:17 [restartedMain] INFO  c.e.EmployeeManagementSystemApplication - Starting EmployeeManagementSystemApplication using Java 21.0.4 with PID 11416 (D:\CoreJava_Workspaces\Atchaiah_Mama_Assignments_Workspace\Employee_Management_System\target\classes started by NAMBULA KOTAIAH in D:\CoreJava_Workspaces\Atchaiah_Mama_Assignments_Workspace\Employee_Management_System)
+2024-10-26 18:09:17 [restartedMain] INFO  c.e.EmployeeManagementSystemApplication - The following 1 profile is active: "prod  # Use 'dev' or 'test' profiles as needed"
+2024-10-26 18:09:17 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-26 18:09:17 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-26 18:09:18 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-10-26 18:09:18 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
+2024-10-26 18:09:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-10-26 18:09:18 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-26 18:09:18 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-26 18:09:18 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-26 18:09:18 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-26 18:09:18 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1032 ms
+2024-10-26 18:09:18 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-10-26 18:09:18 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-26 18:09:19 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f8b1b6
+2024-10-26 18:09:19 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-26 18:09:19 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-10-26 18:09:19 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-26 18:09:19 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-10-26 18:09:19 [restartedMain] INFO  c.e.EmployeeManagementSystemApplication - Started EmployeeManagementSystemApplication in 2.448 seconds (process running for 3.267)
+2024-10-26 18:09:37 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-26 18:09:37 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-10-26 18:09:37 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-10-26 18:09:37 [http-nio-8080-exec-2] INFO  c.e.r.EmployeeRestController - Recieved a request to save employee : Employee(id=0, name=deepika, department=software, salary=59393.0) 
+2024-10-26 18:09:37 [http-nio-8080-exec-2] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Execute SQL Query insert into employee(name,department,salary) values (?,?,?): with values : name=deepika,department=software,salary=59393.0
+2024-10-26 18:09:37 [http-nio-8080-exec-2] INFO  c.e.r.impl.EmployeeRepositoryImpl - saved employee :  Employee(id=0, name=deepika, department=software, salary=59393.0) , Rows Effected : 1
+2024-10-26 18:09:37 [http-nio-8080-exec-2] INFO  c.e.r.EmployeeRestController - Employee Added Successfully : Employee(id=0, name=deepika, department=software, salary=59393.0)
+2024-10-26 18:09:49 [http-nio-8080-exec-1] INFO  c.e.r.EmployeeRestController - Recieved a request to get list of employees
+2024-10-26 18:09:49 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Execute Query to fetch list of employees from database select * from employee
+2024-10-26 18:09:50 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=1, name=koti, department=it, salary=39283.0)
+2024-10-26 18:09:50 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=2, name=gopi, department=devops, salary=43453.0)
+2024-10-26 18:09:50 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=4, name=harsha, department=cyber security, salary=100000.0)
+2024-10-26 18:09:50 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=7, name=madhan, department=crompton, salary=30000.0)
+2024-10-26 18:09:50 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=8, name=pramodh, department=ux, salary=15000.0)
+2024-10-26 18:09:50 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=9, name=dhanush, department=mechanical, salary=18000.0)
+2024-10-26 18:09:50 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=10, name=siva shankar, department=pyhon, salary=30000.0)
+2024-10-26 18:09:50 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=11, name=suresh, department=finance, salary=18000.0)
+2024-10-26 18:09:50 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=12, name=srinu, department=agriculture, salary=9000.0)
+2024-10-26 18:09:50 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=13, name=subbayamma, department=agriculture, salary=9000.0)
+2024-10-26 18:09:50 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=14, name=peraiah, department=sheeps, salary=20000.0)
+2024-10-26 18:09:50 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=15, name=prasanna, department=agriculture, salary=32322.0)
+2024-10-26 18:09:50 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=16, name=madhavi, department=agriculture, salary=322.0)
+2024-10-26 18:09:50 [http-nio-8080-exec-1] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=18, name=deepika, department=software, salary=59393.0)
+2024-10-26 18:09:50 [http-nio-8080-exec-1] INFO  c.e.r.impl.EmployeeRepositoryImpl - Found 14 employees.
+2024-10-26 18:10:03 [http-nio-8080-exec-3] INFO  c.e.r.EmployeeRestController - Request to get employee by id : 18
+2024-10-26 18:10:03 [http-nio-8080-exec-3] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Execute a query to get employee select * from employee where id=? by id : 18
+2024-10-26 18:10:04 [http-nio-8080-exec-3] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Mapped Employee: Employee(id=18, name=deepika, department=software, salary=59393.0)
+2024-10-26 18:10:04 [http-nio-8080-exec-3] INFO  c.e.r.impl.EmployeeRepositoryImpl - Found employee : Employee(id=18, name=deepika, department=software, salary=59393.0),with id : 18
+2024-10-26 18:10:04 [http-nio-8080-exec-3] INFO  c.e.r.EmployeeRestController - Founded employee with id : 18,Employee(id=18, name=deepika, department=software, salary=59393.0)
+2024-10-26 18:10:26 [http-nio-8080-exec-5] INFO  c.e.r.EmployeeRestController - Recieved a request to update employee by id : 18
+2024-10-26 18:10:26 [http-nio-8080-exec-5] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Execute Update Query update employee set name=?,department=?,salary=? where id=?  :,to update name=bhargavi,department=tester,salary=13232.0,with id : 18
+2024-10-26 18:10:26 [http-nio-8080-exec-5] INFO  c.e.r.impl.EmployeeRepositoryImpl - updating employee : Employee(id=18, name=bhargavi, department=tester, salary=13232.0), with id : 18 successfull and effected rows : 1
+2024-10-26 18:10:26 [http-nio-8080-exec-5] INFO  c.e.r.EmployeeRestController - updating employee : Employee(id=18, name=bhargavi, department=tester, salary=13232.0),with id : 18 is successfull
+2024-10-26 18:10:37 [http-nio-8080-exec-6] INFO  c.e.r.EmployeeRestController - Request to delete employee with id : 18
+2024-10-26 18:10:37 [http-nio-8080-exec-6] DEBUG c.e.r.impl.EmployeeRepositoryImpl - Execute a Query to delete employee delete from employee where id=? with id : 18
+2024-10-26 18:10:37 [http-nio-8080-exec-6] INFO  c.e.r.impl.EmployeeRepositoryImpl - Deleting employee with id : 18 successfull
+2024-10-26 18:14:51 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-10-26 18:14:51 [RMI TCP Connection(14)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-26 18:14:51 [RMI TCP Connection(14)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-10-26 18:14:51 [RMI TCP Connection(14)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
